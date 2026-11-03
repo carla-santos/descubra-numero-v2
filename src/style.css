@@ -1,0 +1,83 @@
+@import "@fontsource-variable/roboto-condensed";
+
+@import "tailwindcss";
+
+@theme {
+  /* Cores da marca */
+  --color-primary: #610972;
+  --color-primary-light: #c09dc7;
+  --color-primary-dark: #440650;
+
+  /* Neutros */
+  --color-grey-light-1: #eee;
+  --color-grey-light-2: #eceeec;
+  --color-grey-light-3: #dbd6d6;
+  --color-grey-light-4: #cbcfcb;
+  --color-grey-dark-1: #221f1f;
+
+  /* Tipografia */
+  --font-sans: "Roboto Condensed Variable", sans-serif;
+
+  /* Títulos */
+  --text-heading-1: 2.5rem; /* 40px */
+  --text-heading-1--line-height: 1;
+  --text-heading-2: 1.875rem; /* 30px */
+  --text-heading-2--line-height: 1;
+
+  /* Borda arredondada padrão: 10px */
+  --radius-brand: 0.625rem;
+
+  /* Sombra do cartão principal */
+  --shadow-card: 0 20px 40px rgb(0 0 0 / 0.3);
+
+  /* Animações de entrada */
+  --animate-move-left: move-left 1s ease-out;
+  --animate-move-right: move-right 1s ease-out;
+  --animate-move-bottom: move-bottom 1s backwards;
+
+  @keyframes move-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    80% {
+      transform: translateX(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+
+  @keyframes move-right {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    80% {
+      transform: translateX(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+
+  @keyframes move-bottom {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
