@@ -5,9 +5,118 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Descubra o número</title>
+    <meta
+      name="description"
+      content="O jogo Descubra o número consiste em tentar adivinhar um número escondido entre 1 a 20."
+    />
   </head>
-  <body>
-    <div id="app"></div>
+
+  <body class="bg-primary text-grey-dark-1">
+    <div
+      class="grid grid-cols-1 min-h-dvh md:grid-cols-[94%] md:place-content-center"
+    >
+      <main
+        class="grid grid-cols-1 grid-rows-[repeat(2,1fr)] shadow-card md:grid-cols-2 md:grid-rows-none"
+      >
+        <section
+          class="flex-col py-4.5 bg-grey-light-3 justify-center flex items-center md:px-5 md:py-10"
+        >
+          <h1
+            class="text-[2rem] font-bold text-primary leading-none lg:text-heading-1 motion-safe:animate-move-left"
+          >
+            Descubra o número!
+          </h1>
+          <h2
+            class="my-5 text-[1.35rem] font-bold leading-none motion-safe:animate-move-right lg:text-heading-2"
+          >
+            Como se joga?
+          </h2>
+
+          <div
+            class="px-4.5 py-2 mx-7 mb-7 bg-grey-light-1 rounded-brand text-lg/normal md:text-xl/normal motion-safe:animate-move-bottom motion-safe:[animation-delay:0.8s] md:mx-7.5 md:mb-10 md:px-5 md:py-2.5"
+          >
+            <p>
+              O jogo consiste em tentar adivinhar um número escondido entre 1 a
+              20. Esses números são gerados aleatoriamente nesse intervalo, o
+              objetivo é adivinhar no menor número possível de tentativas e
+              assim obter a maior pontuação final.
+            </p>
+          </div>
+
+          <button
+            type="button"
+            data-content="Jogar novamente"
+            class="btn motion-safe:animate-move-bottom motion-safe:[animation-delay:0.7s]"
+            data-game-mode="new"
+          >
+            Jogar novamente
+          </button>
+        </section>
+
+        <section
+          class="flex-col py-4.5 bg-grey-light-4 justify-center flex items-center md:px-5 md:py-10"
+        >
+          <div
+            class="mb-9 py-2 w-34 border-5 border-dashed border-current bg-grey-light-2 text-center text-[3.6rem] font-bold md:mb-10 md:w-37.5 md:py-2.5 md:text-[4rem]"
+            data-content="secret-number"
+          >
+            ?
+          </div>
+          <p
+            class="mb-9 text-lg/normal font-bold text-primary md:mb-10 md:text-[1.75rem]"
+            data-content="score-message"
+          >
+            Comece o jogo...
+          </p>
+
+          <div class="flex-wrap mb-11 gap-4.5 flex md:mb-12 md:gap-5">
+            <input
+              class="p-2 h-18 w-27 rounded-brand bg-white text-center text-2xl/normal md:h-20 md:w-30 md:p-2.5 md:text-[1.75rem]"
+              type="number"
+              min="1"
+              data-content="checkbox-input"
+            />
+            <button type="button" class="btn" data-game-mode="check">
+              Verifique!
+            </button>
+          </div>
+
+          <div
+            class="flex-wrap gap-8 pb-2.5 text-[1.35rem] font-bold flex md:gap-9 md:pb-0 md:text-2xl/normal"
+          >
+            <p>
+              🎮 Pontos:
+              <span class="text-primary" data-content="score">20</span>
+            </p>
+            <p>
+              🏆 Record:
+              <span class="text-primary" data-content="highscore">0</span>
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer
+        class="flex-row flex-wrap px-12 py-6 gap-4 bg-white text-lg justify-center flex items-center md:p-4"
+      >
+        <p class="">
+          Desenvolvido por
+          <span class="text-primary font-bold">Carla Santos</span>
+        </p>
+        <ul class="p-0 list-none">
+          <li class="transition-transform duration-400 hover:scale-120">
+            <a
+              href="https://github.com/carla-santos/descubra-numero-v2"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img src="public/github.png" alt="Logo do Github" />
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
