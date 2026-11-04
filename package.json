@@ -1,7 +1,10 @@
 {
   "name": "descubra-numero-v2",
+  "description": "Jogo de adivinhar um número secreto gerado aleatoriamente entre 1 a 20",
   "private": true,
   "version": "0.0.0",
+  "author": "Carla Santos",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
